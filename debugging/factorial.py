@@ -1,3 +1,5 @@
+$ cat factorial.py
+#!/usr/bin/python3
 import sys
 def factorial(n):
   if n<0:
@@ -14,3 +16,12 @@ if len(sys.argv)>1:
   except ValueError:
     print("Please enter a valid integer")
     
+
+$ ./factorial.py 2
+^CTraceback (most recent call last):
+  File "/private/tmp/factorial.py", line 9, in <module>
+    factorial(int(sys.argv[1]))
+  File "/private/tmp/factorial.py", line 5, in factorial
+    while n > 1:
+          ^^^^^
+KeyboardInterrupt
